@@ -1,0 +1,27 @@
+root@gerard-PC~# mkdir pestillo
+root@gerard-PC~# This file already exists
+root@gerard-PC~# mkdir pestillo
+root@gerard-PC~# This file already exists
+root@gerard-PC~# mkdir peix
+root@gerard-PC~# mkdir hola
+root@gerard-PC~# gatets
+root@gerard-PC~# mkdir crisalida
+root@gerard-PC~# mkdir crisalida
+root@gerard-PC~# rm crisalida
+root@gerard-PC~# rm crisalida
+root@gerard-PC~# This file already exists
+root@gerard-PC~# rm crisalida
+root@gerard-PC~# This file already exists
+root@gerard-PC~# rm crisalida
+root@gerard-PC~# rm algo
+root@gerard-PC~# Cannot find dirs_and_files/algo
+root@gerard-PC~# rm hola
+root@gerard-PC~# rm peix
+root@gerard-PC~# rm peix
+root@gerard-PC~# Cannot find dirs_and_files/peix
+root@gerard-PC~# hello
+root@gerard-PC~# mkdir hello
+root@gerard-PC~# rm hello
+root@gerard-PC~# hello
+root@gerard-PC~# caca
+root@gerard-PC~# cacac

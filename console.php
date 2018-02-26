@@ -6,7 +6,7 @@
  * Time: 18:08
  */
 
-
+include_once ("executa.php");
 
 
 ?>
@@ -31,11 +31,14 @@
 
 <form method="post" action="executa.php" class="form-group">
 
-
     <br>
     <div class="pagination-centered">
-
-        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="root@gerard-PC~#" style=" background-color: black; color: chartreuse">
+        <div style="overflow-y: scroll; background-color: black">
+            <?php
+                llegirFitxer();
+            ?>
+        </div>
+        <input type="text" name="command" class="form-control" id="exampleFormControlInput1" placeholder="root@gerard-PC~#" style=" background-color: black; color: chartreuse">
         <!--<textarea class="form-control" name="command" placeholder="root@gerard-PC~#" id="exampleFormControlTextarea1" rows="1" style=" background-color: black; color: chartreuse"></textarea>-->
     </div>
     <br>
