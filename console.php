@@ -6,7 +6,7 @@
  * Time: 18:08
  */
 
-include_once ("executa.php");
+
 
 
 ?>
@@ -29,12 +29,13 @@ include_once ("executa.php");
 <div style="background-color: blue;width: 100%;height: 100%;">
 <div class="container-fluid col-md-4 col-md-offset-4" style="margin-top:5%;">
 
-<form method="post" action="executa.php" class="form-group">
+<form method="post" action="console.php" class="form-group">
 
     <br>
     <div class="pagination-centered">
         <div style="overflow-y: scroll; background-color: black">
             <?php
+                include_once ("actualitza_canvis.php");
                 llegirFitxer();
             ?>
         </div>
