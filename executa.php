@@ -35,7 +35,14 @@ function executa($comanda)
                     move_directory($arr[2], $arr[3]);
                 }
             }
-        } else {
+        }else if($arr[0] == "ls"){
+            if(empty($ar[1])){
+                ls();
+            }else{
+                escriure("Unknown command");
+            }
+        }
+        else {
             escriure("unknown command");
         }
     }
@@ -52,6 +59,7 @@ function llegirFitxer()
     } else {
         echo " ";
     }
+
 
     fclose($file);
 }

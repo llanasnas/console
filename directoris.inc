@@ -38,6 +38,23 @@ function move_directory($arxiu,$nou_arxiu){
         escriure("Can't find this directory");
     }
 }
+function ls(){
+
+    $directories = scandir("dirs_and_files");
+    foreach ($directories as $item){
+
+        if($item == "." | $item == ".."){
+
+        }else{
+            $file = fopen("dirs_and_files/text_consola.txt","a")OR die("Cannot Open this file");
+            fwrite($file,$item . PHP_EOL);
+            
+            fclose($file);
+        }
+
+    }
+
+}
 
 
 ?>
