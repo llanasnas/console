@@ -16,6 +16,17 @@ function executa($comanda)
         $arr = explode(' ', trim($comanda));
         if ($arr[0] == "mkdir") {
             crea_directoris($comanda);
+        } else if ($arr[0] == "vim") {
+            if (empty($arr[1])) {
+                escriure("No file name expected");
+            } else {
+                $content = "";
+                for ($i = 2; $i <= sizeof($arr); $i++) {
+                    $content = $content . $arr[$i] . " ";
+                }
+                crea_modifica_fitxer($arr[1], $content);
+            }
+
         } else if ($arr[0] == "rm") {
             if ($arr[1] == "-d") {
                 esborra_directoris($comanda);
@@ -35,14 +46,17 @@ function executa($comanda)
                     move_directory($arr[2], $arr[3]);
                 }
             }
-        }else if($arr[0] == "ls"){
-            if(empty($ar[1])){
+        } else if ($arr[0] == "ls") {
+            if (empty($ar[1])) {
                 ls();
-            }else{
+            } else {
                 escriure("Unknown command");
             }
-        }
-        else {
+        } else if ($arr[0] == "stats") {
+            if (file_exists("dirs_and_files/" . $arr[1])) {
+                stats_fitcher("dirs_and_files/" . $arr[1]);
+            }
+        } else {
             escriure("unknown command");
         }
     }
@@ -51,10 +65,10 @@ function executa($comanda)
 function llegirFitxer()
 {
 
-    $file = fopen("dirs_and_files/text_consola.txt", "r") OR die("Cannot Open this file");
-    $filesize = filesize("dirs_and_files/text_consola.txt");
+    $file = fopen("text_consola.txt", "r") OR die("Cannot Open this file");
+    $filesize = filesize("text_consola.txt");
     if ($filesize > 0) {
-        $text = str_replace(PHP_EOL, "</br>", fread($file, filesize("dirs_and_files/text_consola.txt")));
+        $text = str_replace(PHP_EOL, "</br>", fread($file, filesize("text_consola.txt")));
         echo "<p style='color: chartreuse'>" . $text . "</p>";
     } else {
         echo " ";
@@ -67,8 +81,18 @@ function llegirFitxer()
 function buidar_fitxer()
 {
 
-    esborra_fitxer("dirs_and_files/text_consola.txt");
-    crea_fitxer("dirs_and_files/text_consola.txt");
+    esborra_fitxer("text_consola.txt", "");
+    borrar_consola("text_consola.txt", "");
+
+}
+
+function borrar_consola($name)
+{
+    fopen($name, "w+");
+
+    $file = fopen($name, "a") OR die("Cannot Open this file");
+
+    fclose($file);
 
 }
 

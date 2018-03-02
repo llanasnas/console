@@ -24,7 +24,7 @@ function esborra_directoris($command){
 }
 function escriure($text){
 
-    $file = fopen("dirs_and_files/text_consola.txt","a")OR die("Cannot Open this file");
+    $file = fopen("text_consola.txt","a")OR die("Cannot Open this file");
     $text = "root@gerard-PC~# ". $text;
     fwrite($file,$text . PHP_EOL);
     fclose($file);
@@ -42,19 +42,35 @@ function ls(){
 
     $directories = scandir("dirs_and_files");
     foreach ($directories as $item){
-
-        if($item == "." | $item == ".."){
-
+        if($item == "." || $item == ".."){
         }else{
-            $file = fopen("dirs_and_files/text_consola.txt","a")OR die("Cannot Open this file");
-            fwrite($file,$item . PHP_EOL);
-            
+            $file = fopen("text_consola.txt","a")OR die("Cannot Open this file");
+            if(is_dir("dirs_and_files/".$item)){
+                fwrite($file,"<span style='color:blue; !important'>".$item ."</span>". PHP_EOL);
+            }else{
+                fwrite($file,"<span style='color:darkgrey; !important'>".$item ."</span>". PHP_EOL);
+            }
             fclose($file);
         }
-
     }
-
 }
+function copia_directori($directorio,$destino){
+
+    $dir = opendir($directorio);
+    @mkdir($destino);
+    while(false !== ( $file = readdir($dir)) ) {
+        if (( $file != '.' ) && ( $file != '..' )) {
+            if ( is_dir($directorio . '/' . $file) ) {
+                recurse_copy($directorio . '/' . $file,$destino . '/' . $file);
+            }
+            else {
+                copy($directorio . '/' . $file,$destino . '/' . $file);
+            }
+        }
+    }
+    closedir($dir);
+}
+
 
 
 ?>

@@ -1,0 +1,38 @@
+root@gerard-PC~# hola
+root@gerard-PC~# unknown command
+root@gerard-PC~# ls
+<span style='color:blue; !important'>console</span>
+<span style='color:darkgrey; !important'>pepito</span>
+<span style='color:blue; !important'>pepo</span>
+<span style='color:darkgrey; !important'>text_consola.txt</span>
+root@gerard-PC~# rm text_consola.txt
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# dirs_and_files/ pepito
+root@gerard-PC~# can't delete this file
+root@gerard-PC~# rm pepito
+root@gerard-PC~# ls
+<span style='color:blue; !important'>console</span>
+<span style='color:blue; !important'>pepo</span>
+<span style='color:darkgrey; !important'>text_consola.txt</span>
+root@gerard-PC~# stats text_consola.txt
+
+root@gerard-PC~# vim oscar con todo este texto
+root@gerard-PC~# stats oscar
+con todo este texto  
+root@gerard-PC~# ls
+<span style='color:blue; !important'>console</span>
+<span style='color:darkgrey; !important'>oscar</span>
+<span style='color:blue; !important'>pepo</span>
+<span style='color:darkgrey; !important'>text_consola.txt</span>
+root@gerard-PC~# rm text_consola.txt
