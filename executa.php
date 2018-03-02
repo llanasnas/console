@@ -52,9 +52,9 @@ function executa($comanda)
             } else {
                 escriure("Unknown command");
             }
-        } else if ($arr[0] == "stats") {
+        } else if ($arr[0] == "cat") {
             if (file_exists("dirs_and_files/" . $arr[1])) {
-                stats_fitcher("dirs_and_files/" . $arr[1]);
+                cat_fitcher("dirs_and_files/" . $arr[1]);
             }
         } else {
             escriure("unknown command");

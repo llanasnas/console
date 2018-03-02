@@ -36,3 +36,5 @@ root@gerard-PC~# ls
 <span style='color:blue; !important'>pepo</span>
 <span style='color:darkgrey; !important'>text_consola.txt</span>
 root@gerard-PC~# rm text_consola.txt
+root@gerard-PC~# rm text_consola.txt
+root@gerard-PC~# can't find this file

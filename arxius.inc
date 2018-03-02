@@ -27,7 +27,7 @@ function sha1_peix($fitxer){
 
 
 }
-function stats_fitcher($filename){
+function cat_fitcher($filename){
 
 
     $file = fopen("text_consola.txt","a")OR die("Cannot Open this file");
